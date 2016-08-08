@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin:0;
+      background: url("https://unsplash.it/1400/650?random&") fixed;
+      font-family: helvetica, sans-serif;
+      padding-top:25px;
+
+    }
+    header {
+      background: #fdfdfd;
+      position: fixed;
+      left:0;
+      top:0;
+      right:0;
+      box-shadow: 0px 7px 12px rgba(155, 155, 155, 0.1);
+      z-index: 9;
+    }
+    nav {
+      margin-left: 150px;
+      margin-top: -23px;
+      padding-bottom: 12px;
+    }
+    nav a {
+      padding: 10px 15px;
+    }
+    h1 {
+      font-size: .7em;
+      display: inline-block;
+      margin-top:12px;
+      margin-left:12px;
+    }
+
+    p {
+      font-size:1.1em;
+      font-weight: 100;
+      line-height: 160%;
+      max-width: 93%;
+      margin-bottom:55px;
+    }
+    img {
+      padding: 7px 7px 9px;
+      border: solid 2px rgba(33, 33, 33, 0.5);
+      margin: 10px;
+      margin-top:12px
+      margin-bottom:0px;
+    }
+
+    footer {
+      background: orange;
+      padding: 15px;
+      margin-top:50px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    footer a {
+      padding: 15px;
+    }
+
+    .about {
+      background: rgba(255, 255, 255, 0.85);
+      margin-top: 150px;
+      padding-top:12px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom:3px;
+      width: 57%;
+
+    }
+    /*.about p {
+      margin-bottom:20px;
+    }*/
+
+    .work {
+      width: 100%;
+      position: absolute;
+      top:600px;
+      background: #333;
+      color: #fefefe;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      border-top: solid 10px #313;
+
+    }
+    .work  h2 {
+      margin-left:45px;
+      margin-top: 35px;
+    }
+    .work img {
+      background: #333;
+    }
+    .work p{margin-bottom:0px;}
+
+    .pr {
+      float:right;
+    }
+    nav .pr {
+      margin-top:-7px;
+      font-size:.7em;
+
+
+    }
+
+    /*article p {display:none;}*/
+    article {
+      margin:25px;
+    }
+    .row .item {width:50%;float:left;}
+    article a {
+      float:right;
+      background: #eee;
+      padding: 12px 15px;
+      margin-left:12px;
+    }
+    article img {
+      float:left;
+      padding: 12px 17px;
+    }
+    h3 {
+      margin-left:0px;
+      background:rgba(111, 111, 111, 0.4);
+      padding: 20px;
+      margin-bottom: -20px;
+
+      z-index:12;
+    }
+    .row p{background: #222;
+    padding: 15px;}
+
+    @media (max-width: 975px) {
+      .row .item {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .about {
+        width:100%;
+        box-sizing: border-box;
+      }
+      .work{top:650px;}
+    }
+
+    @media (max-width: 450px) {
+
+      .work{top:750px;}
+
+    }
+    @media (max-width: 500px) {
+      nav .pr {
+
+        display:none;
+
+      }
+
+    }
+
+
+  </style>
+  <title>
+    Brian Danowski: Full Stack Developer, Designer, Artist, Writer, Speaker
+  </title>
+</head>
+<body>
+  <header>
+    <h1>Brian Danowski</h1>
+    <nav><a href="#">about</a><a href="#">work</a><a href="#">contact</a><a class="pr" href="https://github.com/mailtruck">github</a><a class="pr" href="http://twitter.com/briandanowski">twitter</a></nav>
+  </header>
+  <div class="about">
+    <h2>Hi. I'm Brian Danowski. Welcome to my portfolio</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae. Donec dictum sem nunc, quis cursus mi fringilla non. Suspendisse non sodales dolor, id interdum ante. Duis eu nunc dolor. Proin ac vulputate nulla. Suspendisse ullamcorper et nunc ac efficitur.</p>
+  </div>
+
+  <div class="work">
+    <h2>Recent Work</h2>
+    <div class="row">
+        <div class="item">
+
+          <article>
+            <h3>Tic Tac Toe Game</h3>
+            <img src="https://unsplash.it/233/175/?image=313">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
+            </p>
+            <a href="#">view on codepen</a>
+            <a href="#">view on github</a>
+          </article>
+        </div>
+
+
+      <div class="item">
+
+        <article>
+          <h3>Pomodoro Timer</h3>
+          <img src="https://unsplash.it/233/175/?image=27">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
+          </p>
+          <a href="#">view on codepen</a>
+          <a href="#">view on github</a>
+        </article>
+    </div>
+  </div>
+  <div class="row">
+      <div class="item">
+
+        <article>
+          <h3>Tic Tac Toe Game</h3>
+          <img src="https://unsplash.it/233/175/?image=993">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
+          </p>
+          <a href="#">view on codepen</a>
+          <a href="#">view on github</a>
+        </article>
+      </div>
+
+
+    <div class="item">
+
+      <article>
+        <h3>Pomodoro Timer</h3>
+        <img src="https://unsplash.it/233/175/?image=266">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
+        </p>
+        <a href="#">view on codepen</a>
+        <a href="#">view on github</a>
+      </article>
+  </div>
+</div>
+    <h2>Old Work</h2>
+    <div class="row">
+      <img src="https://unsplash.it/233/175/?image=0">
+
+      <img src="https://unsplash.it/233/175/?image=7">
+    <div class="row">
+      <img src="https://unsplash.it/233/175/?image=23">
+
+      <img src="https://unsplash.it/233/175/?image=93">
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="#">twitter</a>
+    <a href="#">github</a>
+  </footer>
+
+</body>
