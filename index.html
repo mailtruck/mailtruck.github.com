@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <style>
     body {
       margin:0;
       background: url("https://unsplash.it/1400/650?random&") fixed;
-      font-family: helvetica, sans-serif;
-      padding-top:25px;
+      font-family: 'Open Sans', helvetica, sans-serif;
+      /*padding-top:25px;*/
+
+
 
     }
     header {
@@ -15,12 +20,12 @@
       left:0;
       top:0;
       right:0;
-      box-shadow: 0px 7px 12px rgba(155, 155, 155, 0.1);
+      box-shadow: 0px 7px 12px rgba(155, 155, 155, 0.2);
       z-index: 9;
     }
     nav {
-      margin-left: 150px;
-      margin-top: -23px;
+      margin-left: 130px;
+      margin-top: -28px;
       padding-bottom: 12px;
     }
     nav a {
@@ -36,25 +41,34 @@
     p {
       font-size:1.1em;
       font-weight: 100;
-      line-height: 160%;
+      line-height: 165%;
       max-width: 93%;
       margin-bottom:55px;
     }
     img {
-      padding: 7px 7px 9px;
+      padding: 3px 4px;
       border: solid 2px rgba(33, 33, 33, 0.5);
       margin: 10px;
-      margin-top:12px
-      margin-bottom:0px;
+      margin-top:12px;
+      margin-bottom:3px;
+      max-width: 100%;
+    }
+    article img {
+      float:left;
     }
 
     footer {
-      background: orange;
+      background: #F1FAC0;
       padding: 15px;
+      padding-bottom: 55px;
       margin-top:50px;
-      position: fixed;
+      box-sizing: border-box;
+      float:left;
+      width:100%;
+
+      /*position: fixed;
       bottom: 0;
-      right: 0;
+      right: 0;*/
     }
     footer a {
       padding: 15px;
@@ -74,15 +88,17 @@
       margin-bottom:20px;
     }*/
 
-    .work {
+    #app {
       width: 100%;
-      position: absolute;
-      top:600px;
+      /*position: absolute;*/
+      /*top:600px;*/
+      float:left;
       background: #333;
-      color: #fefefe;
+      color: #F1FAC0;
       margin-bottom: 50px;
       margin-top: 50px;
-      border-top: solid 10px #313;
+      padding-bottom:35px;
+      border-top: solid 10px #4DC5D6;
 
     }
     .work  h2 {
@@ -109,16 +125,30 @@
       margin:25px;
     }
     .row .item {width:50%;float:left;}
-    article a {
+    a {
+      color: #D31D8C
+    }
+    p a, a.button{
+      color: #EE88CD
+    }
+    a.button {
       float:right;
-      background: #eee;
+      background: #4B4B4B;
       padding: 12px 15px;
       margin-left:12px;
+      margin-top: -7px;
+      text-decoration:none;
+      /*margin-right: 0px;*/
     }
-    article img {
-      float:left;
-      padding: 12px 17px;
+    a.button:hover {
+      color: #D31D8C;
+      background:#efefef;
     }
+    h2 a {
+      padding-left: 0;
+    }
+
+
     h3 {
       margin-left:0px;
       background:rgba(111, 111, 111, 0.4);
@@ -127,8 +157,71 @@
 
       z-index:12;
     }
-    .row p{background: #222;
-    padding: 15px;}
+    .row p{
+      box-sizing: border-box;
+
+      padding: 15px;
+      padding-right:0;
+      max-width: 100%;
+      /*padding-right:0;*/
+      /*margin: 0px;*/
+
+    }
+    /*article div {
+      background: #222;
+    }*/
+
+    div.row {clear: both}
+
+
+    button, input, select, textarea {
+      font-family : inherit;
+      font-size   : 100%;
+    }
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1%;
+      outline: none;
+    }
+
+    form  {
+      font-size: 2em;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+    input.submit {
+      width: 175px;
+      height: 75px;
+      float: left;
+      clear: both;
+      margin-top: 12px;
+      /*width:100%;*/
+    }
+    textarea {
+      float:left;
+      width: 500px;
+      height: 8.73em;
+      font-size:.6em;
+      clear: right;
+    }
+
+    div.contact-fields {
+      clear: right;
+      /*float:left;*/
+      width:500px;
+    }
+
+    .links {
+      float: left;
+      clear: both;
+      margin-top: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      background: #333;
+    }
 
     @media (max-width: 975px) {
       .row .item {
@@ -137,6 +230,10 @@
     }
 
     @media (max-width: 650px) {
+      div.contact-fields, textarea{
+        width: 100%;
+
+      }
       .about {
         width:100%;
         box-sizing: border-box;
@@ -144,20 +241,18 @@
       .work{top:650px;}
     }
 
-    @media (max-width: 450px) {
 
-      .work{top:750px;}
-
-    }
     @media (max-width: 500px) {
       nav .pr {
-
         display:none;
-
       }
-
     }
 
+    @media (max-width: 400px) {
+      article img {
+        max-width:39%;
+      }
+    }
 
   </style>
   <title>
@@ -167,87 +262,22 @@
 <body>
   <header>
     <h1>Brian Danowski</h1>
-    <nav><a href="#">about</a><a href="#">work</a><a href="#">contact</a><a class="pr" href="https://github.com/mailtruck">github</a><a class="pr" href="http://twitter.com/briandanowski">twitter</a></nav>
+    <nav><a href="#">about</a><a href="#work">work</a><a href="#contact">contact</a><a class="pr" href="https://github.com/mailtruck">github</a><a class="pr" href="http://twitter.com/briandanowski">twitter</a></nav>
   </header>
+
   <div class="about">
-    <h2>Hi. I'm Brian Danowski. Welcome to my portfolio</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae. Donec dictum sem nunc, quis cursus mi fringilla non. Suspendisse non sodales dolor, id interdum ante. Duis eu nunc dolor. Proin ac vulputate nulla. Suspendisse ullamcorper et nunc ac efficitur.</p>
+    <h2>Hi. I'm Brian Danowski. I'm an aspiring polyglot full stack web engineer.</h2>
+    <p>Welcome to my portfolio. Thanks for taking a minute to get to know me. I'm a lifelong learner and a self starter. I've been coding for over 10 years and my experience includes product/project management, design, and I've even done a bit of sales. Now my goal is to jumpstart my career as a front end and/or full stack web engineer. I can crank out MVP's quickly and/or polish an interface or UI iteraction until it shines. Contact me to find out more about my skills and to discuss how I can bring value to your project or team.</p>
   </div>
-
-  <div class="work">
-    <h2>Recent Work</h2>
-    <div class="row">
-        <div class="item">
-
-          <article>
-            <h3>Tic Tac Toe Game</h3>
-            <img src="https://unsplash.it/233/175/?image=313">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
-            </p>
-            <a href="#">view on codepen</a>
-            <a href="#">view on github</a>
-          </article>
-        </div>
-
-
-      <div class="item">
-
-        <article>
-          <h3>Pomodoro Timer</h3>
-          <img src="https://unsplash.it/233/175/?image=27">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
-          </p>
-          <a href="#">view on codepen</a>
-          <a href="#">view on github</a>
-        </article>
-    </div>
-  </div>
-  <div class="row">
-      <div class="item">
-
-        <article>
-          <h3>Tic Tac Toe Game</h3>
-          <img src="https://unsplash.it/233/175/?image=993">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
-          </p>
-          <a href="#">view on codepen</a>
-          <a href="#">view on github</a>
-        </article>
-      </div>
-
-
-    <div class="item">
-
-      <article>
-        <h3>Pomodoro Timer</h3>
-        <img src="https://unsplash.it/233/175/?image=266">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor aliquet nisl sagittis imperdiet. Pellentesque eu sollicitudin nunc, non fringilla tortor. Duis venenatis cursus sapien, ut consequat elit porttitor vitae.
-        </p>
-        <a href="#">view on codepen</a>
-        <a href="#">view on github</a>
-      </article>
-  </div>
-</div>
-    <h2>Old Work</h2>
-    <div class="row">
-      <img src="https://unsplash.it/233/175/?image=0">
-
-      <img src="https://unsplash.it/233/175/?image=7">
-    <div class="row">
-      <img src="https://unsplash.it/233/175/?image=23">
-
-      <img src="https://unsplash.it/233/175/?image=93">
-    </div>
-
-  </div>
-
+  <div id="app"></div>
   <footer>
-    <a href="#">twitter</a>
-    <a href="#">github</a>
-  </footer>
+    <div id="contact"></div>
 
+  </footer>
+  <footer class="links">
+  <a href="#">twitter</a>
+  <a href="#">github</a>
+</footer>
+
+<script src="./src/client/public/bundle.js" type="text/javascript"></script>
 </body>
