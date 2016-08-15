@@ -73,11 +73,11 @@
 	
 	var _PortfolioItem2 = _interopRequireDefault(_PortfolioItem);
 	
-	var _ContactForm = __webpack_require__(/*! ./ContactForm.js */ 240);
+	var _ContactForm = __webpack_require__(/*! ./ContactForm.js */ 239);
 	
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 	
-	var _portfolioData = __webpack_require__(/*! ./portfolioData.js */ 239);
+	var _portfolioData = __webpack_require__(/*! ./portfolioData.js */ 240);
 	
 	var _portfolioData2 = _interopRequireDefault(_portfolioData);
 	
@@ -32837,6 +32837,88 @@
 
 /***/ },
 /* 239 */
+/*!***************************************!*\
+  !*** ./src/client/app/ContactForm.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ContactForm = function (_React$Component) {
+	  _inherits(ContactForm, _React$Component);
+	
+	  function ContactForm() {
+	    _classCallCheck(this, ContactForm);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ContactForm).apply(this, arguments));
+	  }
+	
+	  _createClass(ContactForm, [{
+	    key: "handleSubmit",
+	    value: function handleSubmit(e) {
+	      // e.preventDefault()
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "h2",
+	          null,
+	          _react2.default.createElement(
+	            "a",
+	            { name: "contact" },
+	            "Get in touch"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "form",
+	          { onSubmit: this.handleSubmit(), action: "https://formspree.io/briandanowski@gmail.com", method: "POST" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "contact-fields" },
+	            _react2.default.createElement("input", { type: "text", placeholder: "Name", name: "name" }),
+	            _react2.default.createElement("input", { type: "email", placeholder: "Email", name: "_replyto" }),
+	            _react2.default.createElement("input", { type: "tel", placeholder: "Phone (optional)", name: "Phone" })
+	          ),
+	          _react2.default.createElement("textarea", { placeholder: "Message", name: "message" }),
+	          _react2.default.createElement("input", { type: "submit", className: "submit", value: "Send" })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactForm;
+	}(_react2.default.Component);
+	
+	exports.default = ContactForm;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ContactForm.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 240 */
 /*!*****************************************!*\
   !*** ./src/client/app/portfolioData.js ***!
   \*****************************************/
@@ -32910,85 +32992,6 @@
 	exports.default = bcdPortfolioData;
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "portfolioData.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 240 */
-/*!***************************************!*\
-  !*** ./src/client/app/ContactForm.js ***!
-  \***************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ContactForm = function (_React$Component) {
-	  _inherits(ContactForm, _React$Component);
-	
-	  function ContactForm() {
-	    _classCallCheck(this, ContactForm);
-	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ContactForm).apply(this, arguments));
-	  }
-	
-	  _createClass(ContactForm, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "h2",
-	          null,
-	          _react2.default.createElement(
-	            "a",
-	            { name: "contact" },
-	            "Get in touch"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "form",
-	          { onSubmit: function onSubmit(e) {
-	              return e.preventDefault();
-	            } },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "contact-fields" },
-	            _react2.default.createElement("input", { type: "text", placeholder: "Name" }),
-	            _react2.default.createElement("input", { type: "email", placeholder: "Email" }),
-	            _react2.default.createElement("input", { type: "tel", placeholder: "Phone" })
-	          ),
-	          _react2.default.createElement("textarea", { placeholder: "Message" }),
-	          _react2.default.createElement("input", { type: "submit", className: "submit" })
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return ContactForm;
-	}(_react2.default.Component);
-	
-	exports.default = ContactForm;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/home/boshi/Desktop/portfolio/site/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ContactForm.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ]);

@@ -7,7 +7,11 @@
   <style>
     body {
       margin:0;
-      background: url("https://unsplash.it/1400/650?random&") fixed;
+      /*background: url("https://unsplash.it/1400/650?random&") fixed;*/
+      background: url("./assets/inspiring.jpg") fixed;
+      background-repeat: no-repeat;
+      /*background-size:contain;*/
+      background-position:center;
       font-family: 'Open Sans', helvetica, sans-serif;
       /*padding-top:25px;*/
 
@@ -59,12 +63,14 @@
 
     footer {
       background: #F1FAC0;
-      padding: 15px;
-      padding-bottom: 55px;
+      padding: 20px;
+      padding-left:15px
+      padding-bottom: 15px;
       margin-top:50px;
       box-sizing: border-box;
+      margin-bottom:30px;
       float:left;
-      width:100%;
+
 
       /*position: fixed;
       bottom: 0;
@@ -73,15 +79,19 @@
     footer a {
       padding: 15px;
     }
-
-    .about {
+    .bg-white-trans {
+      background:white;
       background: rgba(255, 255, 255, 0.85);
+    }
+    .about {
+
       margin-top: 150px;
       padding-top:12px;
       padding-left: 25px;
       padding-right: 25px;
       padding-bottom:3px;
-      width: 57%;
+      width: 565px;
+      box-sizing: border-box;
 
     }
     /*.about p {
@@ -101,9 +111,13 @@
       border-top: solid 10px #4DC5D6;
 
     }
+    .work h2, footer h2 {
+      font-size:2.5em;
+    }
     .work  h2 {
       margin-left:45px;
-      margin-top: 35px;
+      margin-top: 25px;
+      margin-bottom:5px;
     }
     .work img {
       background: #333;
@@ -128,15 +142,16 @@
     a {
       color: #D31D8C
     }
-    p a, a.button{
+    p a, a.button, footer.links a{
       color: #EE88CD
     }
     a.button {
+      font-size:1.3em;
       float:right;
       background: #4B4B4B;
       padding: 12px 15px;
       margin-left:12px;
-      margin-top: -7px;
+      margin-top: -4px;
       text-decoration:none;
       /*margin-right: 0px;*/
     }
@@ -144,8 +159,22 @@
       color: #D31D8C;
       background:#efefef;
     }
+
+    h2 {
+      margin-bottom:1em;
+      margin-left: 15px;
+
+    }
     h2 a {
       padding-left: 0;
+    }
+    h2 span {
+      font-size:1.4em;
+    }
+
+    footer h2 {
+      margin: 0;
+      margin-bottom: 20px;
     }
 
 
@@ -153,7 +182,9 @@
       margin-left:0px;
       background:rgba(111, 111, 111, 0.4);
       padding: 20px;
+      padding-bottom:23px;
       margin-bottom: -20px;
+      font-size: 1.7em;
 
       z-index:12;
     }
@@ -161,7 +192,6 @@
       box-sizing: border-box;
 
       padding: 15px;
-      padding-right:0;
       max-width: 100%;
       /*padding-right:0;*/
       /*margin: 0px;*/
@@ -221,36 +251,121 @@
       width: 100%;
       box-sizing: border-box;
       background: #333;
+      margin-bottom:0;
+      padding-top:15px;
+      padding-bottom:20px;
     }
 
     @media (max-width: 975px) {
+      .work h2 {
+        margin-left:20px;
+      }
       .row .item {
         width: 100%;
+      }
+      article {
+        margin:0;
+      }
+      .item {
+        margin-bottom:15px;
+      }
+      article p {
+        font-size:1.4em;
+        padding-right:0;
+      }
+      a.button {
+        font-size:1.5em;
       }
     }
 
     @media (max-width: 650px) {
+      article p{
+        font-size:1.3em;
+      }
       div.contact-fields, textarea{
         width: 100%;
 
       }
+
+      /*.work{top:650px;}*/
+    }
+    @media (max-width: 580px) {
       .about {
         width:100%;
         box-sizing: border-box;
+
       }
-      .work{top:650px;}
+      .about p {
+        max-width:100%;
+      }
+
+    }
+    @media (max-width:541px){
+      h2 {
+        font-size:1.4em;
+      }
+    }
+    @media (max-width:510px) {
+      h2 {
+        font-size:1.3em;
+      }
+
     }
 
-
     @media (max-width: 500px) {
+      article p {
+        font-size:1.2em;
+      }
       nav .pr {
         display:none;
       }
     }
+    @media (max-width:479px){
+      h2 {
+        font-size:1.2em;
+      }
+    }
+
+    @media (max-width: 448px){
+      h2 {
+        font-size:1.1em
+      }
+    }
+    @media (max-width:418px){
+      h2 {
+        font-size:1em;
+      }
+    }
+
+
 
     @media (max-width: 400px) {
+      article p{
+        font-size:1em;
+      }
       article img {
         max-width:39%;
+      }
+    }
+    @media (max-width:387px){
+      h2{
+        font-size: 1.4em;
+      }
+    }
+    @media (max-width:380px){
+      h2{
+        font-size:1.3em;
+      }
+      nav {
+        margin-left:110px;
+      }
+      nav a {
+        padding:10px 11px;
+      }
+    }
+    @media (max-width:344px){
+      h2 {
+        font-size:1.2em;
       }
     }
 
@@ -265,12 +380,12 @@
     <nav><a href="#">about</a><a href="#work">work</a><a href="#contact">contact</a><a class="pr" href="https://github.com/mailtruck">github</a><a class="pr" href="http://twitter.com/briandanowski">twitter</a></nav>
   </header>
 
-  <div class="about">
-    <h2>Hi. I'm Brian Danowski. I'm an aspiring polyglot full stack web engineer.</h2>
-    <p>Welcome to my portfolio. Thanks for taking a minute to get to know me. I'm a lifelong learner and a self starter. I've been coding for over 10 years and my experience includes product/project management, design, and I've even done a bit of sales. Now my goal is to jumpstart my career as a front end and/or full stack web engineer. I can crank out MVP's quickly and/or polish an interface or UI iteraction until it shines. Contact me to find out more about my skills and to discuss how I can bring value to your project or team.</p>
+  <div class="about bg-white-trans">
+    <h2>Hi. I'm Brian Danowski. I'm an aspiring <span>full stack web engineer.</span></h2>
+    <p>Welcome to my portfolio. Thanks for taking a minute to get to know me. I'm a lifelong learner and a self starter. I've been coding for over 10 years and my experience includes product &amp; project management, design, and I've even done a bit of sales. Now my goal is to jumpstart my career as a front end and/or full stack web engineer. I can crank out MVP's quickly and/or polish an interface or UI iteraction until it shines. Contact me to find out more about my skills and to discuss how I can bring value to your project or team.</p>
   </div>
   <div id="app"></div>
-  <footer>
+  <footer class="bg-white-trans">
     <div id="contact"></div>
 
   </footer>
