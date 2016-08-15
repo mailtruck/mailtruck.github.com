@@ -32935,7 +32935,7 @@
 	
 	  title: 'Weather App',
 	  imgUrl: './assets/weather.png',
-	  description: 'Weather App made for Free Code Camp: The project is built with react and uses superagent for the AJAX calls. The user' + String.fromCharCode(39) + 's location is obtained by calling out to ip-api.com, and the weather data is from [OpenWeatherMap](http://google.com). The user can click on the temperature to switch between Celcius and Fahrenheit.',
+	  description: 'Weather App made for Free Code Camp: The project is built with react and uses superagent for the AJAX calls. The user' + String.fromCharCode(39) + 's location is obtained by calling out to ip-api.com, and the weather data is from Open Weather Map. The user can click on the temperature to switch between Celcius and Fahrenheit.',
 	  urls: [{
 	    label: 'codepen',
 	    url: 'http://codepen.io/boshi/full/qNQEKW/'
@@ -32947,6 +32947,9 @@
 	  urls: [{
 	    label: 'heroku',
 	    url: 'https://bcd-fcc-urls.herokuapp.com/'
+	  }, {
+	    label: 'github',
+	    url: 'https://github.com/mailtruck/fcc-urlshortener'
 	  }]
 	}, {
 	  title: 'Tic Tac Toe Game',
@@ -32954,7 +32957,7 @@
 	  description: 'Tic Tac Toe Game built for Free Code Camp: This project is built with jQuery. The game allows the user to play tic tac toe against the computer. The user can choose between X and O before the game begins. The computer' + String.fromCharCode(39) + 's AI is a work in progress.',
 	  urls: [{
 	    label: 'codepen',
-	    url: 'http://codepen.io/boshi/full/qNQEKW/'
+	    url: 'http://codepen.io/boshi/full/vKOLgW/'
 	  }]
 	}, {
 	  title: 'Pomodoro Timer App',
@@ -32971,6 +32974,9 @@
 	  urls: [{
 	    label: 'heroku',
 	    url: 'https://bcd-fcc-timestamp.herokuapp.com/'
+	  }, {
+	    label: 'github',
+	    url: 'https://github.com/mailtruck/fcc-timestamp'
 	  }]
 	},
 	// {

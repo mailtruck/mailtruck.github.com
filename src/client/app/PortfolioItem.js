@@ -1,8 +1,9 @@
 import React from 'react';
+import Markdown from 'react-remarkable';
 
 class PortfolioItem extends React.Component {
   buttonRenderer(buttonText, buttonUrl, i){
-    return <a key={i} href={buttonUrl} target="_blank">View on {buttonText}</a>
+    return <a className="button" key={i} href={buttonUrl} target="_blank">View on {buttonText}</a>
   }
 
   render() {
@@ -11,9 +12,9 @@ class PortfolioItem extends React.Component {
         <article>
           <h3>{this.props.title}</h3>
           <img src={this.props.imgUrl} />
-          <p>
-            {this.props.description}
-          </p>
+
+            <Markdown>{this.props.description}</Markdown>
+          
           {this.props.buttons.map((item, i)=>this.buttonRenderer(item.label, item.url, i))}
         </article>
 
